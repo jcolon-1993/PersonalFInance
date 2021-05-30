@@ -1,14 +1,18 @@
+//Hides pie chart when page is loaded
 $(document).ready(function(){
     $(".myPie").hide();
 
 });
+  // Used to pass to argument
+  //Gets reference of placeholder for pie chart.
   var ctx = $("#myCanvas").get(0).getContext("2d");
   var income = document.getElementById("income");
   var expenses = document.getElementById("expenses");
   var savings = document.getElementById("savings");
   var investments = document.getElementById("investments");
 
-
+  // Create instance of Chart object for pieChart
+  //Takes two argument: context and object literal
   var pieChart = new Chart(ctx, {
     type:"pie",
     data:{
@@ -30,6 +34,9 @@ $(document).ready(function(){
     }]
     },
   });
+
+//Updates chart when user clicks away from form.
+//Also implements logic and arithmetic. 
 function updateChart()
 {
   var add = [expenses.value, savings.value, investments.value];
@@ -73,6 +80,13 @@ else
   setCookies("login", currentCookie, 365)
 
   }
+
+  if(getCookies("login") == "" || getCookies("login") == null)
+  {
+    $("#logout").hide();
+
+  }
+
 }
 
 function logIn()
@@ -88,6 +102,15 @@ function logIn()
   setCookies("login", currentCookie, 365);
 
 }
+
+function logout()
+{
+
+  document.cookie = "login=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
+  window.location.reload();
+
+}
+
 function setCookies(cname, cvalue, exdays)
 {
     var d = new Date();

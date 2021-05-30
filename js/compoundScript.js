@@ -1,12 +1,12 @@
 $(document).ready(function(){
-    $(".compound").hide();
+    $(".compoundOutput").hide();
 
 });
 var assets = document.getElementById("assets");
 var years = document.getElementById("years");
 
 
-
+//Computes compound interest when user clicks away from form. 
 function updateChart()
 {
   var compoundInterest = 0;
@@ -24,7 +24,7 @@ function updateChart()
 
    $("#years").change(function()
    {
-     $(".compound").delay("slow").fadeIn();
+     $(".compoundOutput").delay("slow").fadeIn();
 
    });
 
@@ -52,6 +52,13 @@ else
   setCookies("login", currentCookie, 365)
 
   }
+
+  if(getCookies("login") == "" || getCookies("login") == null)
+  {
+    $("#logout").hide();
+
+  }
+
 }
 
 function logIn()
@@ -66,6 +73,17 @@ function logIn()
   setCookies("login", currentCookie, 365);
 
 }
+
+function logout()
+{
+
+  document.cookie = "login=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
+  window.location.reload();
+
+
+
+}
+
 function setCookies(cname, cvalue, exdays)
 {
     var d = new Date();

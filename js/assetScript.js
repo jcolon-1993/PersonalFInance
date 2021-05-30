@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    $(".asset").hide();
+    $(".assetPie").hide();
 
 });
 
@@ -51,7 +51,7 @@ document.getElementById("CashAllocation").innerHTML = "Total Cash: " + cashAlloc
 
 $("#cash").change(function()
 {
-  $(".asset").delay("slow").slideToggle("slow");
+  $(".assetPie").delay("slow").slideDown("slow");
 
 });
 
@@ -79,6 +79,13 @@ else
   setCookies("login", currentCookie, 365)
 
   }
+
+  if(getCookies("login") == "" || getCookies("login") == null)
+  {
+    $("#logout").hide();
+
+  }
+
 }
 
 function logIn()
@@ -91,6 +98,16 @@ function logIn()
 
 
   setCookies("login", currentCookie, 365);
+
+}
+
+function logout()
+{
+
+  document.cookie = "login=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
+  window.location.reload();
+
+
 
 }
 function setCookies(cname, cvalue, exdays)

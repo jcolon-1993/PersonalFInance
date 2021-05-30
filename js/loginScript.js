@@ -1,4 +1,9 @@
+$(document).ready(function(){
+    $("#logout").hide();
 
+});
+
+// cookies
 if(getCookies("login") != "")
 {
   $("#login").hide();
@@ -19,7 +24,7 @@ else
   setCookies("login", currentCookie, 365)
   }
 }
-
+//Sets cookies when user logs in by storing information inside cookies.
 function logIn()
 {
   var email = document.getElementById("email");
@@ -31,7 +36,10 @@ function logIn()
   setCookies("login", currentCookie, 365);
 
 
+
 }
+
+
 function setCookies(cname, cvalue, exdays)
 {
     var d = new Date();
@@ -63,6 +71,7 @@ function getCookies(cName)
   return "";
 }
 
+// Redirects user to home page when form is submitted.
 function redirect() {
     window.location.replace("index.html");
     return false;

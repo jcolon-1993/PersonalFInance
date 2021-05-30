@@ -1,7 +1,5 @@
 var submit = document.getElementById("result");
-
-
-
+// Used when user submits form. Uses error handling and validation.
 function showAlert()
 {
   var name = document.getElementById("Firstname");
@@ -29,12 +27,15 @@ function showAlert()
   " been sent to " + email.value + ". One on our advisors " + "will be reaching out to you shortly");
   }
 }
-
+// Cookies
 if(getCookies("login") != "")
 {
   $("#login").hide();
+  $("#logout").show();
+
   var email = document.getElementById("email");
   document.getElementById("showname").innerHTML = "You are signed in";
+
 
 }
 
@@ -48,9 +49,19 @@ else
 
 
   $("#name").show();
+  $("#logout").show();
+
+
   setCookies("login", currentCookie, 365)
 
   }
+
+  if(getCookies("login") == "" || getCookies("login") == null)
+  {
+    $("#logout").hide();
+
+  }
+
 }
 
 function logIn()
@@ -63,6 +74,16 @@ function logIn()
 
 
   setCookies("login", currentCookie, 365);
+
+}
+
+function logout()
+{
+
+  document.cookie = "login=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
+  window.location.reload();
+
+
 
 }
 function setCookies(cname, cvalue, exdays)
