@@ -2,7 +2,8 @@
 <html>
   <head>
     <link href="css/styles.css" type="text/css" rel="stylesheet">
-    <title>Final Project</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget</title>
   </head>
 <body>
   <div class="headerfooter">
@@ -27,21 +28,33 @@
           <li id="showname"></li>
         </ul>
     </div>
+
+    <div id="logout">
+        <ul>
+          <button onclick="logout()">Sign Out</button>
+        </ul>
+    </div>
+
+    </div>
   </div>
   </div>
+
+  <!-- Div for info about budget -->
   <div class="budget">
-    <h2>Welcome to the budgeting calculator, this calculator will take calculate
+    <p class="title">Budget Calculator<p>
+    <h2>Welcome to the budgeting calculator, this calculator will  calculate
       your total monthly expenses and shows you how much you have left over of each
       month to save and invest</h2>
+      <!-- Form for user budget -->
       <div class="container">
         <form>
-            <h1>Monthly Net Income</h1>
+            <h2>Monthly Net Income</h2>
             <p>
               <label for="income">Income:</label>
               <input type="number" onchange="updateChart()" id="income" name="income">
               <br>
             </p>
-            <h1>Fixed Expenses</h1>
+            <h2>Fixed Expenses</h2>
             <p>
               <label for="expenses">Expenses:</label>
               <input type="number" id="expenses" onchange="updateChart()" name="expenses">
@@ -63,6 +76,7 @@
       </div>
     </div>
 
+    <!-- Placeholder for pie chart -->
     <div class="myPie">
       <p id="cash"></p>
       <canvas id="myCanvas"></canvas>

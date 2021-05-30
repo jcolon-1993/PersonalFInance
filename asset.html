@@ -2,7 +2,8 @@
 <html>
   <head>
     <link href="css/styles.css" type="text/css" rel="stylesheet">
-    <title>Final Project</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assets</title>
   </head>
 <body>
   <div class="headerfooter">
@@ -27,19 +28,27 @@
           <li id="showname"></li>
         </ul>
     </div>
+
+    <div id="logout">
+        <ul>
+          <button onclick="logout()">Sign Out</button>
+        </ul>
+    </div>
+
   </div>
-  <div class="budget">
+  <div class="asset">
+    <p class="title">Asset Allocation Calculator</p>
     <h2>Welcome to the asset allocation calculator, this calculator will ask
       how much you want to invest in each of your asset classes per month.</h2>
       <div class="container">
         <form>
-            <h1>Stocks</h1>
+            <h2>Stocks</h2>
             <p>
               <label for="stocks">Stocks:</label>
               <input type="number" onchange="updateChart()" id="stocks" name="stocks">
               <br>
             </p>
-            <h1>Bonds</h1>
+            <h2>Bonds</h2>
             <p>
               <label for="bonds">Bonds:</label>
               <input type="number" id="bonds" onchange="updateChart()" name="bonds">
@@ -55,7 +64,7 @@
     </div>
   </div>
 
-    <div class="asset">
+    <div class="assetPie">
       <canvas id="myCanvas"></canvas>
       <h2>Asset Allocation</h2>
       <p id="StockAllocation"></p>

@@ -2,9 +2,13 @@
 <html>
   <head>
     <link href="css/styles.css" type="text/css" rel="stylesheet">
-    <title>Final Project</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Home</title>
   </head>
 <body>
+
+  <!-- Div for header. -->
   <div class="headerfooter">
     <p id="welcome">Welcome to the financial group</p>
     <a href="index.html"><img src="img/icon.jpg"></a>
@@ -16,19 +20,27 @@
       <li><a href="compound.html">Compound Interest Calculator</a></li>
     </ul>
   </div>
+  <!-- Login Div -->
     <div id="login">
         <ul>
           <li><a href="login.html">Sign in</a></li>
         </ul>
     </div>
-
+    <!-- Place holder to show if user logs in -->
     <div id="name">
         <ul>
           <li id="showname"></li>
         </ul>
     </div>
+    <!-- Logout button -->
+    <div id="logout">
+        <ul>
+          <button onclick="logout()">Sign Out</button>
+        </ul>
+    </div>
+
   </div>
-  </div>
+  <!-- Div to hold info about organization using grid. -->
   <div class="info">
     <div class="about">
       <h1>About us</h1>
@@ -63,6 +75,7 @@
       </table>
     </div>
   </div>
+  <!-- contact form -->
     <div class="inquire">
       <h2>If you would like to get in touch with our investment advisors, please fill out this form.</h2>
       <div class="container">
@@ -86,7 +99,7 @@
     </div>
   </div>
 
-
+    <!-- Footer -->
     <div class="footer">
       <table>
           <tr>
