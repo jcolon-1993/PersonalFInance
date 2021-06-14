@@ -3,5 +3,5 @@
 - Uses jQuery for animations 
 - Breaks down user's budget and asset allocation 
 - Computes compound interest
-- Allows users to log in with use of cookies. 
+- Allows users to log in with the use of cookies. 
 
