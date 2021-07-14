@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="css/styles.css" type="text/css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assets</title>
+  </head>
+<body>
+  <div class="headerfooter">
+    <p>Welcome to the financial group</p>
+    <a href="index.html"><img src="img/icon.jpg"></a>
+    <div id="links">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="budget.html">Budget Calculator</a></li>
+      <li><a href="asset.html">Asset Allocation Calculator</a></li>
+      <li><a href="compound.html">Compound Interest Calculator</a></li>
+    </ul>
+  </div>
+    <div id="login">
+        <ul>
+          <li><a href="login.html">Log in</a></li>
+        </ul>
+    </div>
+    <div id="name">
+        <ul>
+          <li id="showname"></li>
+        </ul>
+    </div>
+    <div id="logout">
+        <ul>
+          <button onclick="logout()">Sign Out</button>
+        </ul>
+    </div>
+  </div>
+  <div class="asset">
+    <p class="title">Asset Allocation Calculator</p>
+    <h2>Welcome to the asset allocation calculator, this calculator will ask
+      how much you want to invest in each of your asset classes per month.</h2>
+      <div class="container">
+        <form>
+            <h2>Stocks</h2>
+            <p>
+              <label for="stocks">Stocks:</label>
+              <input type="number" id="stocks" name="stocks">
+              <br>
+            </p>
+            <h2>Bonds</h2>
+            <p>
+              <label for="bonds">Bonds:</label>
+              <input type="number" id="bonds" name="bonds">
+              <br>
+            </p>
+            <h2>Cash</h2>
+            <p>
+              <label for="cash">Cash:</label>
+              <input type="number" id="cash" name="cash">
+              <br>
+            </p>
+            <input type="submit" id="submit" value="submit">
+      </form>
+    </div>
+  </div>
+    <div class="assetPie">
+      <canvas id="myCanvas"></canvas>
+      <h2>Asset Allocation</h2>
+      <p id="StockAllocation"></p>
+      <p id="BondAllocation"></p>
+      <p id="CashAllocation"></p>
+    </div>
+    <div class="footer">
+      <table>
+          <tr>
+            <th>Accounts</th>
+            <th class="investments">Investments</th>
+          </tr>
+        <tr>
+          <td>401k</td>
+          <td class="investments">Stocks</td>
+        </tr>
+        <tr>
+          <td>Roth 401k</td>
+          <td class="investments">Bonds</td>
+        </tr>
+        <tr>
+          <td>Roth IRA</td>
+          <td class="investments">ETFs</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td class="investments">Mutual Funds</td>
+        </tr>
+      </table>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.2.0/chart.min.js"></script>
+    <script src="js/jquery-3.5.1.js"></script>
+    <script src="js\assetScript.js"></script>
+</body>
+</html>

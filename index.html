@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="css/styles.css" type="text/css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Home</title>
+  </head>
+<body>
+
+  <!-- Div for header. -->
+  <div class="headerfooter">
+    <p id="welcome">Welcome to the financial group</p>
+    <a href="index.html"><img src="img/icon.jpg"></a>
+    <div id="links">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="budget.html">Budget Calculator</a></li>
+      <li><a href="asset.html">Asset Allocation Calculator</a></li>
+      <li><a href="compound.html">Compound Interest Calculator</a></li>
+    </ul>
+  </div>
+  <!-- Login Div -->
+    <div id="login">
+        <ul>
+          <li><a href="login.html">Sign in</a></li>
+        </ul>
+    </div>
+    <!-- Place holder to show if user logs in -->
+    <div id="name">
+        <ul>
+          <li id="showname"></li>
+        </ul>
+    </div>
+    <!-- Logout button -->
+    <div id="logout">
+        <ul>
+          <button onclick="logout()">Sign Out</button>
+        </ul>
+    </div>
+
+  </div>
+  <!-- Div to hold info about organization using grid. -->
+  <div class="info">
+    <div class="about">
+      <h1>About us</h1>
+      <p>We are a non-profit organization looking to provide eduactional resources as a means to
+        promote financial literacy.
+        </p>
+    </div>
+    <div class="about">
+      <h1>Our Mission</h1>
+      <p>Our main goal is to provide knowledge and educational materials to help people reach their financial goals
+        </p>
+    </div>
+    <div class="about">
+      <h1>Recommended Resources</h1>
+      <table>
+        <tr>
+          <th>Book name</th>
+          <th>Author</th>
+        </tr>
+        <tr>
+          <td><a href="https://www.amazon.com/Intelligent-Investor-Definitive-Investing-Essentials/dp/0060555661">The Intelligent Investor</a></td>
+          <td>Benjamin Graham</td>
+        </tr>
+        <tr>
+          <td><a href="https://www.amazon.com/One-Up-Wall-Street-Already/dp/0743200403">One Up On Wall Street</a></td>
+          <td>Peter Lynch</td>
+        </tr>
+        <tr>
+          <td><a href="https://www.amazon.com/Will-Teach-You-Rich-Second-dp-1523505745/dp/1523505745/ref=dp_ob_title_bk">I will Teach You To Be Rich</a></td>
+          <td>Ramit Sethi</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <!-- contact form -->
+    <div class="inquire">
+      <h2>If you would like to get in touch with our investment advisors, please fill out this form.</h2>
+      <div class="container">
+        <form>
+          <p>
+            <label for="Firstname">First name:</label>
+            <input type="text" id="Firstname" name="Firstname">
+            <br>
+          </p>
+          <p>
+            <label for="Lastname">Last Name:</label>
+            <input type="text" id="Lastname" name="Lastname"></input>
+            <br>
+          </p>
+          <p>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+          </p>
+          <input type="submit" id="result" value="Submit" onclick="showAlert()">
+        </form>
+    </div>
+  </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <table>
+          <tr>
+            <th>Accounts</th>
+            <th class="investments">Investments</th>
+          </tr>
+        <tr>
+          <td><a href="https://en.wikipedia.org/wiki/401(k)">401k</a></td>
+          <td class="investments"><a href="https://en.wikipedia.org/wiki/Stock">Stocks</td>
+        </tr>
+        <tr>
+          <td><a href="https://en.wikipedia.org/wiki/Roth_401(k)">Roth 401k</a></td>
+          <td class="investments"><a href="https://en.wikipedia.org/wiki/Bond_(finance)">Bonds</a></td>
+        </tr>
+        <tr>
+          <td><a href="https://en.wikipedia.org/wiki/Roth_IRA">Roth IRA</a></td>
+          <td class="investments"><a href="https://en.wikipedia.org/wiki/Exchange-traded_fund">ETFs</a></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td class="investments"><a href="https://en.wikipedia.org/wiki/Mutual_fund">Mutual Funds</a></td>
+        </tr>
+      </table>
+    </div>
+    <script src="js/jquery-3.5.1.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
