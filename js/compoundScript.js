@@ -4,6 +4,7 @@ $(document).ready(function(){
 });
 var assets = document.getElementById("assets");
 var years = document.getElementById("years");
+var $compoundEl = $(".compoundOutput").find("h2");
 
 
 //Computes compound interest when user clicks away from form.
@@ -22,7 +23,10 @@ $("form").on("submit", function(e)
   document.getElementById("result").innerHTML = "In " + years.value + " years, " +
    "$" + assets.value + " will grow to: " + " $" + compoundInterest.toFixed(2);
 
-     $(".compoundOutput").delay("slow").fadeIn();
+   $compoundEl = $("<h2>Final Balance</h2>").insertBefore("#result");
+
+
+  $(".compoundOutput").delay("slow").fadeIn();
 });
 
 

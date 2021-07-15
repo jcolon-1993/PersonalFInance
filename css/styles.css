@@ -5,6 +5,8 @@ body
 
 .headerfooter
 {
+  display: flex;
+  overflow: hidden;
   background-color: #111139;
   display: inline-block;
   width: 100%;
@@ -430,6 +432,14 @@ display: table;
   height: auto;
   float: right;
 }
+.assetPie p
+{
+  padding-left: 80px;
+}
+.assetPie h2
+{
+  padding-left: 50px;
+}
 
 .budget #cash
 {
@@ -481,7 +491,6 @@ display: table;
   .headerfooter
   {
     padding-bottom: 100px;
-    width: auto;
 
   }
   .headerfooter p
@@ -2336,8 +2345,4 @@ display: table;
     margin-left: 60%;
     height: auto;
   }
-
-
-
-
 }

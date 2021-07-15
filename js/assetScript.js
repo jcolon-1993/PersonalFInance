@@ -7,7 +7,7 @@ var ctx = $("#myCanvas").get(0).getContext("2d");
 var stocks = document.getElementById("stocks");
 var bonds = document.getElementById("bonds");
 var cash = document.getElementById("cash");
-
+var $assetsAlloc = $(".assetPie").find("h2");
 
 
 
@@ -52,7 +52,7 @@ $("form").on("submit", function(e)
   document.getElementById("StockAllocation").innerHTML = "Total Stocks: " + stockAlloc.toFixed(2) + "%";
   document.getElementById("BondAllocation").innerHTML = "Total Bonds: " + bondAlloc.toFixed(2) + "%";
   document.getElementById("CashAllocation").innerHTML = "Total Cash: " + cashAlloc.toFixed(2) + "%";
-
+  $assetsAlloc = $("<h2>Asset Allocation</h2>").insertBefore("#myCanvas");
 
   $(".assetPie").find("h2").fadeIn("slow");
   });

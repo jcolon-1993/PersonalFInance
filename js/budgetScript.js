@@ -10,6 +10,7 @@ $(document).ready(function(){
   var expenses = document.getElementById("expenses");
   var savings = document.getElementById("savings");
   var investments = document.getElementById("investments");
+  var $budgetAlloc = $(".myPie").find("h2");
 
 
 //Updates chart when user clicks away from form.
@@ -55,6 +56,9 @@ $(document).ready(function(){
     document.getElementById("ExpenseAllocation").innerHTML = "Total Expenses: " + expensesAlloc.toFixed(2) + "%";
     document.getElementById("SavingsAllocation").innerHTML = "Total Savings: " + savingsAlloc.toFixed(2) + "%";
     document.getElementById("InvestmentsAllocation").innerHTML = "Total Investments: " + investmentAlloc.toFixed(2) + "%";
+    $assetsAlloc = $("<h2>Budget Allocation</h2>").insertBefore("#myCanvas");
+
+
     $(".myPie").find("h2").fadeIn("slow");
   });
 
